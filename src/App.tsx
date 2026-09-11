@@ -7,7 +7,7 @@ import Footer from "./Components/Footer/Footer";
 
 
 const technologiesFetch=async():Promise<Itechnologies[] >=>{
-  const res=await fetch('/Data.json')
+  const res = await fetch(`${import.meta.env.BASE_URL}Data.json`);
   const data=await res.json();
   return data;
 }
