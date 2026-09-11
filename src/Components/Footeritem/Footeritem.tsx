@@ -1,8 +1,7 @@
-import React from 'react';
+
 
 const Footeritem = () => {
     return (
-        
         <div className="flex gap-50">
             <div>
                 <h4 className="text-sm font-semibold text-black mb-4">PRODUCT</h4>

@@ -1,4 +1,3 @@
-import React from 'react';
 
 import Footeritem from '../Footeritem/Footeritem';
 import FooterLeft from '../FooterLeft/FooterLeft';
