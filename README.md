@@ -61,9 +61,9 @@ JSX (JavaScript XML) is a syntax extension for JavaScript that lets us write HTM
 
 2. What is the difference between props and state?
 Answer:
-
 Props (Properties): Read-only data passed from a parent component down to a child component. A child cannot modify its incoming props.
 State: Internal, mutable data managed within the component itself. When state changes (via a state setter function), React re-renders the component to update the UI.
+
 3. What does the useState hook do, and where did you use it in this project?
 Answer:
 The useState hook allows functional components to store and manage local state. In this project, useState was used in Technologies.tsx (const [stack, setStack] = useState<Itechnologies[]>([])) to track the list of selected technologies in the user's stack.
@@ -87,11 +87,12 @@ tsx
 ) : (
   technologies.map(tech => <StackItem key={tech.name} tech={tech} />)
 )}
+
 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 Answer:
-
 Parent to Child: The parent passes data downwards through props (e.g., <TechnologyCard technologies={data} />).
 Child to Parent: The parent passes a callback function as a prop to the child. When an event happens (like a button click), the child invokes that callback with data, notifying the parent (e.g., onAdd(technology)).
+
 👤 Author
 Akash Dey
 
