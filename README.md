@@ -1,35 +1,80 @@
-# React + TypeScript + Vite
+# ⚡ DevStack — Custom Developer Tech Stack Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=githubpages)](https://imakashdey.github.io/Assingment-5-Dev-Stack-/)
+[![React 19](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-Bundler-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 
-Currently, two official plugins are available:
+> An interactive web application built with **React 19**, **TypeScript**, and **Tailwind CSS** that enables developers to explore, select, and manage their personalized technology stack with real-time feedback and state management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🔗 Quick Links
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- 🌐 **Live Website:** [DevStack Live Demo](https://imakashdey.github.io/Assingment-5-Dev-Stack-/)
+- 📂 **GitHub Repository:** [imakashdey/Assingment-5-Dev-Stack-](https://github.com/imakashdey/Assingment-5-Dev-Stack-)
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+---
 
-## Expanding the Oxlint configuration
+## 🚀 Overview
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+**DevStack** is a modern tech stack selection tool developed as an assignment project. It provides an intuitive catalog of popular programming languages, frameworks, libraries, databases, and DevOps tools. Users can explore curated information for each technology (ratings, difficulty level, category, badges) and assemble their ideal tech stack with smooth interactions and notifications.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+---
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## ✨ Key Features
+
+- 🎯 **Dynamic Technology Catalog:** Renders technology cards asynchronously from JSON data featuring categories (Frontend, Backend, Database, DevOps, etc.), ratings, difficulty levels, and tags.
+- ⚡ **React 19 `use()` & Suspense Integration:** Utilizes modern React 19 asynchronous data loading using the `use()` hook inside a `<Suspense />` boundary.
+- ➕ **Interactive Stack Builder:** One-click functionality to add tools/frameworks to your custom tech stack.
+- ⚠️ **Duplicate Item Protection:** Intelligent checks to prevent duplicate selections with real-time warning alerts via `react-toastify`.
+- 📋 **"Your Stack" Panel & Management:**
+  - Real-time counter of selected technologies.
+  - Remove individual technologies from the active stack.
+  - "Clear All" / reset button for a fresh start.
+- 🎨 **Responsive & Polished UI:** Crafted with Tailwind CSS v4 featuring modern card layouts, badges, and smooth hover interactions across mobile, tablet, and desktop viewports.
+- 🔔 **Toast Notifications:** Instant feedback on item addition, duplicate warnings, and removal actions.
+
+---
+
+## 🛠️ Tech Stack & Libraries
+
+| Category | Technology / Library | Description |
+| :--- | :--- | :--- |
+| **Frontend Framework** | [React 19](https://react.dev/) | Component-based UI library utilizing new React 19 features |
+| **Language** | [TypeScript](https://www.typescriptlang.org/) | Strongly typed JavaScript for reliable and scalable code |
+| **Build Tool** | [Vite](https://vitejs.dev/) | Fast build tool and HMR development server |
+| **Styling** | [Tailwind CSS v4](https://tailwindcss.com/) | Modern utility-first CSS framework |
+| **Notifications** | [React-Toastify](https://fkhadra.github.io/react-toastify/) | Toast notifications for user feedback |
+| **Linting & Quality** | [Oxlint](https://oxc.rs/) | High-performance JavaScript/TypeScript linter |
+| **Deployment** | [GitHub Pages & Actions](https://pages.github.com/) | Automated CI/CD deployment pipeline |
+
+---
+
+## 📂 Project Structure
+
+```text
+Assingment-5-Dev-Stack-/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # GitHub Actions deployment workflow
+├── public/
+│   └── Data.json               # Technology dataset (name, tag, level, rating, etc.)
+├── src/
+│   ├── assets/                 # Icons & image assets
+│   ├── Components/
+│   │   ├── Footer/             # Footer component
+│   │   ├── Hero/               # Hero & introduction banner
+│   │   ├── Navbar/             # Top navigation bar
+│   │   ├── Technologies/       # Main container fetching data & managing stack state
+│   │   ├── TechnologyCard/     # Individual tech card UI & add handlers
+│   │   └── YourStack/          # Selected stack sidebar & item deletion
+│   ├── Type/
+│   │   └── technology.ts       # TypeScript interfaces (Itechnologies)
+│   ├── App.tsx                 # Main application root
+│   ├── main.tsx                # React DOM entry point
+│   └── index.css               # Global styles & Tailwind imports
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
