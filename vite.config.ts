@@ -4,5 +4,5 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-   base: "/Assingment-5-Dev-Stack-/",
+  base: process.env.NETLIFY ? "/" : "/Assingment-5-Dev-Stack-/",
 });
