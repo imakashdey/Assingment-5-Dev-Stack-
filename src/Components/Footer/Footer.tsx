@@ -5,16 +5,16 @@ import FooterLeft from '../FooterLeft/FooterLeft';
 const Footer = () => {
     return (
         <footer>
-             <div className="divider"></div>
-            <div className="container mx-auto py-10">
-                <div className="flex gap-32 items-center">
+            <div className="divider"></div>
+            <div className="container mx-auto px-4 py-10">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-32 items-start">
                     <FooterLeft />
                     <div>
-                    <Footeritem />
+                        <Footeritem />
                     </div>
                 </div>
 
-                <div className="border-t border-gray-200 mt-10 pt-6 flex justify-between items-center">
+                <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-gray-400">
                         © 2026 Dev Stack. All rights reserved.
                     </p>

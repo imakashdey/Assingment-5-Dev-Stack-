@@ -2,7 +2,7 @@
 
 const Footeritem = () => {
     return (
-        <div className="flex gap-50">
+        <div className="flex flex-wrap sm:flex-nowrap gap-8 md:gap-16 lg:gap-24">
             <div>
                 <h4 className="text-sm font-semibold text-black mb-4">PRODUCT</h4>
                 <ul className="flex flex-col gap-1">
